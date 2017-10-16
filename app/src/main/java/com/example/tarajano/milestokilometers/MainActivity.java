@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button convertMiToKm = (Button) findViewById(R.id.buttonConvertMiToKm);
         Button convertKmToMi = (Button) findViewById(R.id.buttonConvertKmToMi);
+        Button buttonReset = (Button) findViewById(R.id.buttonReset);
+
 
         // Miles to Kilometers
         convertMiToKm.setOnClickListener(new View.OnClickListener() {
@@ -43,5 +45,15 @@ public class MainActivity extends AppCompatActivity {
                     editTextMi.setText(decimalNumber.format(valueMi).toString());
                 }
             });
+        //buttonReset
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                EditText editTextMi = (EditText) findViewById(R.id.editTextMi);
+                EditText editTextKm = (EditText) findViewById(R.id.editTextKm);
+                editTextMi.setText("");
+                editTextKm.setText("");
+            }
+        });
     }
 }

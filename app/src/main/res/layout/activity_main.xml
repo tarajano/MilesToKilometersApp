@@ -30,7 +30,9 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextKm"
         app:layout_constraintRight_toLeftOf="@+id/editTextKm"
         android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp" />
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
 
     <EditText
         android:id="@+id/editTextMi"
@@ -42,7 +44,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:hint="1.0"
+        android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@+id/textViewMi"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,11 +54,15 @@
         android:id="@+id/editTextKm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:hint="0.0"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="true"
         app:layout_constraintLeft_toRightOf="@+id/textViewKm"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMi" />
@@ -66,25 +73,34 @@
         android:layout_height="49dp"
         android:layout_marginLeft="133dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="29dp"
         android:text="Mi to KM"
         android:textSize="20sp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextKm" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextKm"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="8dp" />
 
     <Button
         android:id="@+id/buttonConvertKmToMi"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="133dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="19dp"
         android:text="Km to Mi"
         android:textSize="20sp"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonConvertMiToKm"
         app:layout_constraintTop_toBottomOf="@+id/buttonConvertMiToKm" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:text="Reset"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonConvertKmToMi"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConvertKmToMi" />
 </android.support.constraint.ConstraintLayout>
