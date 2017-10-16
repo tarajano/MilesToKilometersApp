@@ -20,30 +20,28 @@ public class MainActivity extends AppCompatActivity {
 
         // Miles to Kilometers
         convertMiToKm.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v){
-                EditText textBoxMiles = (EditText) findViewById(R.id.textMiles);
-                EditText textBoxKilometers = (EditText) findViewById(R.id.textKilometers);
-                double valueMiles = Double.valueOf(textBoxMiles.getText().toString());
-                double valueKilometers = valueMiles / .62137;
+                EditText editTextMi = (EditText) findViewById(R.id.editTextMi);
+                EditText editTextKm = (EditText) findViewById(R.id.editTextKm);
+                double valueMi = Double.valueOf(editTextMi.getText().toString());
+                double valueKm = valueMi / .62137;
                 DecimalFormat decimalNumber = new DecimalFormat("##.##");
-                textBoxKilometers.setText(decimalNumber.format(valueKilometers).toString());
+                editTextKm.setText(decimalNumber.format(valueKm).toString());
             }
         });
-
 
         // Kilometers to Miles
         convertKmToMi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                EditText textBoxMiles = (EditText) findViewById(R.id.textMiles);
-                EditText textBoxKilometers = (EditText) findViewById(R.id.textKilometers);
-                double valueKilometers = Double.valueOf(textBoxKilometers.getText().toString());
-                double valueMiles = valueKilometers * .62137;
-                DecimalFormat decimalNumber = new DecimalFormat("##.##");
-                textBoxMiles.setText(decimalNumber.format(valueMiles).toString());
-            }
-        });
+                @Override
+                public void onClick(View v){
+                    EditText editTextMi = (EditText) findViewById(R.id.editTextMi);
+                    EditText editTextKm = (EditText) findViewById(R.id.editTextKm);
+                    double valueKm = Double.valueOf(editTextKm.getText().toString());
+                    double valueMi = valueKm * .62137;
+                    DecimalFormat decimalNumber = new DecimalFormat("##.##");
+                    editTextMi.setText(decimalNumber.format(valueMi).toString());
+                }
+            });
     }
 }

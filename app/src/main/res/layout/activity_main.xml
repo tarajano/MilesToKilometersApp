@@ -6,72 +6,82 @@
     android:layout_height="match_parent"
     tools:context="com.example.tarajano.milestokilometers.MainActivity">
 
-    <Button
-        android:id="@+id/buttonConvertKmToMi"
-        android:layout_width="150dp"
-        android:layout_height="54dp"
-        android:text="Km to Mi"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="392dp" />
-
     <EditText
-        android:id="@+id/textMiles"
+        android:id="@+id/editTextMi"
         android:layout_width="100dp"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:inputType="none"
-        android:text="Miles"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="156dp" />
-
-    <EditText
-        android:id="@+id/editTextMiles"
-        android:layout_width="130dp"
-        android:layout_height="55dp"
-        android:layout_marginRight="79dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="21dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="miles"
         android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextKm"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="156dp" />
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/textViewMiles" />
 
     <EditText
-        android:id="@+id/textKilometers"
-        android:layout_width="130dp"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:inputType="none"
-        android:text="Kilometers"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="30dp" />
-
-    <EditText
-        android:id="@+id/editTextKilometers"
-        android:layout_width="130dp"
-        android:layout_height="55dp"
+        android:id="@+id/editTextKm"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="kilometers"
         android:textColor="@android:color/darker_gray"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="175dp" />
+        app:layout_constraintVertical_bias="0.514"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintLeft_toRightOf="@+id/textViewKilometers" />
+
+    <TextView
+        android:id="@+id/textViewMiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Miles"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextMi"
+        app:layout_constraintRight_toLeftOf="@+id/editTextMi"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewKilometers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kilometers"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextKm"
+        app:layout_constraintRight_toLeftOf="@+id/editTextKm"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         android:id="@+id/buttonConvertMiToKm"
-        android:layout_width="150dp"
-        android:layout_height="54dp"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
         android:text="Mi to Km"
-        android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="306dp" />
+        tools:layout_editor_absoluteX="248dp"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <Button
+        android:id="@+id/buttonConvertKmToMi"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="Km to Mi"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConvertMiToKm"
+        app:layout_constraintVertical_bias="0.285"
+        tools:layout_editor_absoluteX="248dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="20dp" />
 </android.support.constraint.ConstraintLayout>
