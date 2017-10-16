@@ -6,82 +6,85 @@
     android:layout_height="match_parent"
     tools:context="com.example.tarajano.milestokilometers.MainActivity">
 
+    <TextView
+        android:id="@+id/textViewMi"
+        android:layout_width="27dp"
+        android:layout_height="29dp"
+        android:text="Mi"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextMi"
+        app:layout_constraintRight_toLeftOf="@+id/editTextMi"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp" />
+
+    <TextView
+        android:id="@+id/textViewKm"
+        android:layout_width="36dp"
+        android:layout_height="29dp"
+        android:text="Km"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextKm"
+        app:layout_constraintRight_toLeftOf="@+id/editTextKm"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp" />
+
     <EditText
         android:id="@+id/editTextMi"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
-        android:inputType="numberDecimal"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextKm"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toRightOf="@+id/textViewMi"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewMiles" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextKm"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@android:color/darker_gray"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textViewKm"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewKilometers" />
-
-    <TextView
-        android:id="@+id/textViewMiles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Miles"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextMi"
-        app:layout_constraintRight_toLeftOf="@+id/editTextMi"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewKilometers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Kilometers"
-        android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextKm"
-        app:layout_constraintRight_toLeftOf="@+id/editTextKm"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextMi" />
 
     <Button
         android:id="@+id/buttonConvertMiToKm"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:text="Mi to Km"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="248dp"
-        tools:layout_editor_absoluteY="327dp" />
+        android:layout_width="130dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="133dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="31dp"
+        android:text="Mi to KM"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextKm" />
 
     <Button
         android:id="@+id/buttonConvertKmToMi"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:text="Km to Mi"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonConvertMiToKm"
-        app:layout_constraintVertical_bias="0.285"
-        tools:layout_editor_absoluteX="248dp" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="20dp" />
+        android:layout_marginLeft="133dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="19dp"
+        android:text="Km to Mi"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConvertMiToKm" />
 </android.support.constraint.ConstraintLayout>
